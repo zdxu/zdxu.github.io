@@ -2,7 +2,7 @@
 layout: post
 title: "max heap and min heap"
 date: 2018-12-02
-tags: "DataStructure"
+tags: "Data-Structure"
 ---
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
