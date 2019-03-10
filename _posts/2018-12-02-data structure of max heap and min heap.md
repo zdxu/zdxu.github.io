@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "数据结构之最大、最小堆"
+title: "max heap and min heap"
 date: 2018-12-02
-tags: "数据结构"
+tags: "data structure"
 ---
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
