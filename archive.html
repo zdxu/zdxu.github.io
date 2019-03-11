@@ -16,10 +16,10 @@ active: archive
         <li>
           {% if post.lastmod %}
             <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
-            <span class="date">{{ post.lastmod | date: "%d-%m-%Y"  }}</span>
+            <span class="date">{{ post.lastmod | date: "%Y年%m月%d日"  }}</span>
           {% else %}
             <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
-            <span class="date">{{ post.date | date: "%d-%m-%Y"  }}</span>
+            <span class="date">{{ post.date | date: "%Y年%m月%d日"  }}</span>
           {% endif %}
         </li>
       {% endif %}
