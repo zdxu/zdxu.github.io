@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "数据结构之最大、最小堆-【zdxu】blog"
+title: "数据结构之最大、最小堆"
 date: 2018-12-02
 tags: "Data&nbsp;Structure"
 ---
