@@ -18,7 +18,7 @@ active: archive
             {{ post.lastmod | date: "%Y.%m.%d"  }}：
             <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
           {% else %}
-            {{ post.lastmod | date: "%Y.%m.%d"  }}：
+            {{ post.date | date: "%Y.%m.%d"  }}：
             <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
           {% endif %}
         </li>
