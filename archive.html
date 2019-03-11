@@ -13,7 +13,7 @@ active: archive
   <ul class="year">
     {% for post in posts %}
       {% if post.tags contains t %}
-        <li>
+        <li class="module-list-item">
           {% if post.lastmod %}
             {{ post.lastmod | date: "%Y.%m.%d"  }}：
             <a href="{{ post.url | relative_url}}">{{ post.title }}</a>

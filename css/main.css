@@ -44,3 +44,14 @@ ul.posts li {
     font-size: 1.6em;
     line-height: 220%;
 }
+
+.module-list-item {
+    margin-left: 1em;
+    font-size: 1.6em;
+    line-height: 220%;
+}
+
+.module-list-item a {
+    text-decoration: underline;
+    color: #000000;
+}
