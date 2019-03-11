@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "max heap and min heap"
+title: "数据结构之最大、最小堆-【zdxu】blog"
 date: 2018-12-02
 tags: "Data&nbsp;Structure"
 ---
