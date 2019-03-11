@@ -15,11 +15,11 @@ active: archive
       {% if post.tags contains t %}
         <li>
           {% if post.lastmod %}
+            {{ post.lastmod | date: "%Y.%m.%d"  }}：
             <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
-            <span class="date">{{ post.lastmod | date: "%Y年%m月%d日"  }}</span>
           {% else %}
+            {{ post.lastmod | date: "%Y.%m.%d"  }}：
             <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
-            <span class="date">{{ post.date | date: "%Y年%m月%d日"  }}</span>
           {% endif %}
         </li>
       {% endif %}
