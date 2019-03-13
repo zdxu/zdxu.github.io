@@ -87,6 +87,7 @@ author: zdxu
     ```
 
 最小堆与最大堆十分类似，这里不在详细描述。
+
 具体最大堆、最小堆的实现代码:[data_struct/src/tree/heap at master · zdxu/data_struct · GitHub](https://github.com/zdxu/data_struct/tree/master/src/tree/heap)
 
 - 备注
