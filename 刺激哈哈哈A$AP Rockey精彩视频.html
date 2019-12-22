@@ -63,7 +63,8 @@
             var item= {
                 'img':'static/img/heisenberg.png',
                 'href':'http://www.baidu.com',
-                'info':array[idx]
+                'info':array[idx],
+                'bottom': Math.floor(Math.random()*document.body.clientWidth)
             };
             $('.container-fluid').barrager(item);
 
