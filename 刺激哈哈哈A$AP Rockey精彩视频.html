@@ -13,11 +13,6 @@
 </head>
 <body style="background-color: black">
     <div class="container-fluid">
-        <div>
-            <div class="col-md-6">
-                        <textarea class="form-control" id="barrager-code" rows="14"  ></textarea>
-                </div>
-        </div>
     </div>
   
     <!-- JS dependencies -->
@@ -73,20 +68,11 @@
 
         $(".pick-a-color").pickAColor();
 
-        var  default_item={
-            'img':'static/heisenberg.png',
-            'info':'弹幕文字信息',
-            'href':'http://www.yaseng.org',
-            'close':true,
-            'speed':6
-        };
-
         var item= {
             'img':'static/img/heisenberg.png',
             'href':'http://www.baidu.com',
             'info':"刺激, 哈哈哈"
         };
-        $('#barrager-code').val(barrager_code.format(default_item));
         $('body').barrager(item);
 
          //每条弹幕发送间隔
