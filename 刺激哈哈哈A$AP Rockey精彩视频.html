@@ -29,7 +29,7 @@
     var array = [
         "这里没有SQ", "未成年还是多读书吧", "你很色哦", "少看黄多读书",
         "淫贼", "哈哈哈", "渣子", "搞这样色",
-        "哇哦，你进来拉", "可赤鸡, 哈哈哈", "2333",
+        "哇哦，你进来拉", "可赤鸡, 哈哈哈", "2333"
     ]
 
     $(function() {
@@ -47,15 +47,15 @@
         var looper_time=30;
         //是否首次执行
         var run_once=true;
-        do_barrager();
-        function do_barrager(){
+
+        do_barager();
+
+        function do_barager(){
             if(run_once ){
                 //如果是首次执行,则设置一个定时器,并且把首次执行置为false
-                looper=setInterval(do_barrager,looper_time);                
+                looper=setInterval(do_barager,looper_time);
                 run_once=false;
             }
-
-//            for (var i=0; i < 1000; i++) {
 
             var idx = Math.floor(Math.random()*array.length);
 
@@ -65,7 +65,6 @@
                 'info':array[idx]
             };
             $('body').barrager(item);
-//            }
 
         }
      
