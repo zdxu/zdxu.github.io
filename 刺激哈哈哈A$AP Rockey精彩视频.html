@@ -43,7 +43,25 @@
 
     $(function() {
 
+        var progress = 0;
         $(".progress").attr("style", "margin: " + window.screen.height/2 -20 + ", 20 ")
+
+        var interval_count = 0;
+
+        var interval_func = null;
+
+        do_progress();
+
+        function do_progress() {
+            if (interval_count < 10) {
+                interval_count = interval_count + 1;
+                interval_func = setInterval(do_progress, 200);
+                $(".progress").attr("aria-valuenow", interval_count*10);
+            }else {
+                clearInterval(interval_func)
+            }
+        }
+
 
         $(".pick-a-color").pickAColor();
 
@@ -60,12 +78,10 @@
         var run_once=true;
 
         do_barager();
-
         function do_barager(){
             if(run_once ){
-                //如果是首次执行,则设置一个定时器,并且把首次执行置为false
-                looper=setInterval(do_barager,looper_time);
                 run_once=false;
+                setInterval(do_barager,looper_time);
             }
 
             var idx = Math.floor(Math.random()*array.length);
