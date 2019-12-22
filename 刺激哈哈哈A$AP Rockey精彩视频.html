@@ -13,7 +13,7 @@
 </head>
 <body style="background-color: black">
     <div class="container-fluid">
-        <h1>A$AP Rockey</h1>
+
     </div>
   
     <!-- JS dependencies -->
@@ -60,11 +60,18 @@
 
             var idx = Math.floor(Math.random()*array.length);
 
+            var bottom = Math.floor(Math.random()*document.body.clientWidth)
+            if (bottom < 40) {
+                bottom = 40
+            }else if (bottom > document.body.clientWidth - 40) {
+                bottom = document.body.clientWidth - 40;
+            }
+
             var item= {
                 'img':'static/img/heisenberg.png',
                 'href':'http://www.baidu.com',
                 'info':array[idx],
-                'bottom': Math.floor(Math.random()*document.body.clientWidth)
+                'bottom': bottom
             };
             $('.container-fluid').barrager(item);
 
