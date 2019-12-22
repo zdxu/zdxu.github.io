@@ -90,7 +90,7 @@
         $('body').barrager(item);
 
          //每条弹幕发送间隔
-        var looper_time=3*1000;
+        var looper_time=30;
         //是否首次执行
         var run_once=true;
         do_barrager();
@@ -101,17 +101,17 @@
                 run_once=false;
             }
 
-            for (var i=0; i < 1000; i++) {
+//            for (var i=0; i < 1000; i++) {
 
-                var idx = Math.floor(Math.random()*array.length);
+            var idx = Math.floor(Math.random()*array.length);
 
-                var item= {
-                    'img':'static/img/heisenberg.png',
-                    'href':'http://www.baidu.com',
-                    'info':array[idx]
-                };
-                $('body').barrager(item);
-            }
+            var item= {
+                'img':'static/img/heisenberg.png',
+                'href':'http://www.baidu.com',
+                'info':array[idx]
+            };
+            $('body').barrager(item);
+//            }
 
         }
      
