@@ -43,7 +43,8 @@
             }
         }
         return result;
-    }
+    };
+
     var  barrager_code=
         'var item={\n'+
         "   img:'{img}', //图片 \n"+
@@ -80,7 +81,7 @@
         var looper_time=3*1000;
         //是否首次执行
         var run_once=true;
-       // do_barrager();
+        do_barrager();
         function do_barrager(){
             if(run_once ){
                 //如果是首次执行,则设置一个定时器,并且把首次执行置为false
@@ -99,52 +100,6 @@
         }
      
     });
- 
-    function  run(){
-        var  info=$('input[name=info]').val();
-        (info == '' ) ?  info='请填写弹幕文字' : info=info;
-        var  href=$('input[name=href]').val();
-        var  speed=parseInt($('input[name=speed]').val());
-        var  bottom=parseInt($('input[name=bottom]').val());
-        var  code=barrager_code;
-        if($('input:radio[name=bottomradio]:checked').val() == 0){
-        var  window_height=$(window).height()-150;
-        bottom=Math.floor(Math.random()*window_height+40);
-        code=code.replace("   bottom:{bottom}, //距离底部高度,单位px,默认随机 \n",'');
-        }
-        var  img=$('input:radio[name=img]:checked').val();
-        
-        if   (img == 'none' ){
-            code=code.replace("   img:'{img}', //图片 \n",'');
-        }
- 
-        var  item={
-                'img':'static/img/'+img,
-                'info':info,
-                'href':href,
-                'close':true,
-                'speed':speed,
-                'bottom':bottom,
-                'color':'#'+$('input[name=color').val(),
-                'old_ie_color':'#'+$('input[name=color').val()
-                };
-         if(!$('input[name=close]').is(':checked')){
-            item.close=false;
-        }
-      
-        code=code.format(item);
-        console.log(code);
-        $('#barrager-code').val(code);
-        eval(code);
-    }
-    function  clear_barrage(){
-        $.fn.barrager.removeAll();
-    }
-    function  run_example(){
-    var example_item={'img':'static/img/heisenberg.png','info':'Hello world!'};
-    $('body').barrager(example_item);
-    return false;
-    }
     </script>
 </body>
 <h1> hello world </h1>
