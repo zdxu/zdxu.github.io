@@ -14,13 +14,13 @@
 <body style="background-color: black">
     <div class="container-fluid">
 
-        <div>
-            <div class="progress">
-                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+        <!--<div>-->
+            <!--<div class="progress">-->
+                <!--<div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 60%">-->
 
-                </div>
-            </div>
-        </div>
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
 
     </div>
   
@@ -43,25 +43,24 @@
 
     $(function() {
 
-        var progress = 0;
-        $(".progress").attr("style", "margin: " + (window.screen.height/2 -20) + "px 20px")
-
-        var interval_count = 0;
-
-        var interval_func = null;
-
-        do_progress();
-
-        function do_progress() {
-            if (interval_count < 10) {
-                interval_count = interval_count + 1;
-                interval_func = setInterval(do_progress, 200);
-                $(".progress").attr("aria-valuenow", interval_count*10);
-            }else {
-                clearInterval(interval_func)
-            }
-        }
-
+//        var progress = 0;
+//        $(".progress").attr("style", "margin: " + (window.screen.height/2 -20) + "px 20px")
+//
+//        var interval_count = 0;
+//
+//        var interval_func = null;
+//
+//        do_progress();
+//
+//        function do_progress() {
+//            if (interval_count < 10) {
+//                interval_count = interval_count + 1;
+//                interval_func = setInterval(do_progress, 200);
+//                $(".progress-bar").attr("aria-valuenow", interval_count*10);
+//            }else {
+//                clearInterval(interval_func)
+//            }
+//        }
 
         $(".pick-a-color").pickAColor();
 
@@ -89,7 +88,7 @@
 
             var bottom = Math.floor(Math.random()*window.screen.height)
             if (bottom < 40) {
-                bottom = 40
+                bottom = 40;
             }else if (bottom > window.screen.height - 40) {
                 bottom = window.screen.height - 40;
             }
