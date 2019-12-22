@@ -32,39 +32,7 @@
         "哇哦，你进来拉", "可赤鸡, 哈哈哈", "2333",
     ]
 
-    String.prototype.format = function(args) {
-        var result = this;
-        if (arguments.length < 1) {
-            return result;
-        }
-        var data = arguments;        
-        if (arguments.length == 1 && typeof (args) == "object") {
-            data = args;
-        }
-        for (var key in data) {
-            var value = data[key];
-            if (undefined != value) {
-                result = result.replace("{" + key + "}", value);
-            }
-        }
-        return result;
-    };
-
-    var  barrager_code=
-        'var item={\n'+
-        "   img:'{img}', //图片 \n"+
-        "   info:'{info}', //文字 \n"+
-        "   href:'{href}', //链接 \n"+
-        "   close:{close}, //显示关闭按钮 \n"+
-        "   speed:{speed}, //延迟,单位秒,默认6 \n"+
-        "   bottom:{bottom}, //距离底部高度,单位px,默认随机 \n"+
-        "   color:'{color}', //颜色,默认白色 \n"+
-        "   old_ie_color:'{old_ie_color}', //ie低版兼容色,不能与网页背景相同,默认黑色 \n"+
-        " }\n"+
-        "$('body').barrager(item);"
-        ;
     $(function() {
-        SyntaxHighlighter.all();
 
         $(".pick-a-color").pickAColor();
 
