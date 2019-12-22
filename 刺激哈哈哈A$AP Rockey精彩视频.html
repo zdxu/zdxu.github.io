@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="static/pick-a-color/css/pick-a-color-1.2.3.min.css">
     <link type="text/css" rel="stylesheet" href="static/syntaxhighlighter/styles/shCoreDefault.css"/>
 </head>
-<body>
+<body style="background-color: black">
     <div class="container-fluid">
         <div>
         </div>
@@ -27,6 +27,13 @@
     <script type="text/javascript" src="static/syntaxhighlighter/scripts/shBrushPhp.js"></script>
     <script type="text/javascript" src="static/pick-a-color/js/pick-a-color-1.2.3.min.js"></script>  
     <script type="text/javascript">
+
+    var array = [
+        "这里没有SQ", "未成年还是多读书吧", "你很色哦", "少看黄多读书",
+        "淫贼", "哈哈哈", "渣子", "搞这样色",
+        "哇哦，你进来拉", "可赤鸡, 哈哈哈", "2333",
+    ]
+
     String.prototype.format = function(args) {
         var result = this;
         if (arguments.length < 1) {
@@ -60,23 +67,21 @@
         ;
     $(function() {
         SyntaxHighlighter.all();
+
         $(".pick-a-color").pickAColor();
-       
+
         var  default_item={
-                'img':'static/heisenberg.png',
-                'info':'弹幕文字信息',
-                'href':'http://www.yaseng.org',
-                'close':true,
-                'speed':6,
-                'bottom':70,
-                'color':'#fff' ,
-                'old_ie_color':'#000000'
-            };
-        var item={'img':'static/img/heisenberg.png','href':'http://www.baidu.com','info':'Jquery.barrager.js 专业的网页弹幕插件'};
-        //item1={'href':'http://www.baidu.com','info':'这是一条很长很长的字幕','close':false};
+            'img':'static/heisenberg.png',
+            'info':'弹幕文字信息',
+            'href':'http://www.yaseng.org',
+            'close':true,
+            'speed':6,
+            'bottom':70,
+            'color':'#fff' ,
+            'old_ie_color':'#000000'
+        };
         $('#barrager-code').val(barrager_code.format(default_item));
-        $('body').barrager(item);
-      
+
          //每条弹幕发送间隔
         var looper_time=3*1000;
         //是否首次执行
@@ -88,18 +93,21 @@
                 looper=setInterval(do_barrager,looper_time);                
                 run_once=false;
             }
-            //获取
-            $.getJSON('server.php?mode=1',function(data){
-                //是否有数据
-                if(data.info){
-                     $('body').barrager(data);
-                }
-            });
-        }
-        function barrager(){
+
+            for (var i=0; i < 1000; i++) {
+
+                var idx = Math.floor(Math.random()*array.length);
+
+                var item= {
+                    'img':'static/img/heisenberg.png',
+                    'href':'http://www.baidu.com',
+                    'info':array[idx]
+                };
+                $('body').barrager(item);
+            }
+
         }
      
     });
     </script>
 </body>
-<h1> hello world </h1>
